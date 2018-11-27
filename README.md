@@ -8,13 +8,20 @@ Confluent Kafka:
 1. Download
 2. Unzip it
 3. Kafka up and running in your local environment 
-Confluence_Kafka/confluent-4.1.1# confluent start
+Confluence_Kafka/confluent-4.1.1# confluent status
+
 ksql-server is [UP]
+
 connect is [UP]
+
 kafka-rest is [UP]
+
 schema-registry is [UP]
+
 kafka is [UP]
+
 zookeeper is [UP]
+
 
 Kafka topic name: users
 
@@ -41,6 +48,10 @@ Step 6: Create a REST controller
 Step 7: Let’s send our message to Kafka using cURL:
   curl -X POST -F 'message=test' http://localhost:9000/kafka/publish
   
+Log:  
+
  INFO 5078 --- [nio-9000-exec-2] com.example.engine.Producer              : #### -> Producing message -> test
+ 
  INFO 5078 --- [nio-9000-exec-2] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+ 
  INFO 5078 --- [ntainer#0-0-C-1] com.example.engine.Producer              : #### -> Consumed message -> test
