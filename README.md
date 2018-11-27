@@ -36,16 +36,19 @@ Step 3: Configure Kafka through application.yml configuration file
 Step 4: Create a producer
 
   1.Creating a producer will write our messages to the topic(users)
+  
   2.Auto-wired KafkaTemplate and will use this instance to publish messages to the topic—that’s it for producer!
 
 Step 5: Create a consumer
 
-  Consumer is  the service that will be responsible for reading messages processing them according to the needs of your own business logic.
-  void consume (String message) to subscribe to the user’s topic and just emit every message to the application log. In your real application, you can handle messages the way your business requires you to.
+  1.Consumer is  the service that will be responsible for reading messages processing them according to the needs of your own business logic.
+  
+  2. void consume (String message) to subscribe to the user’s topic and just emit every message to the application log. In your real application, you can handle messages the way your business requires you to.
 
 Step 6: Create a REST controller
 
 Step 7: Let’s send our message to Kafka using cURL:
+
   curl -X POST -F 'message=test' http://localhost:9000/kafka/publish
   
 Log:  
